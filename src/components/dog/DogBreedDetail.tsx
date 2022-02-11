@@ -4,6 +4,7 @@ import {
   CardContent,
   CardMedia,
   CircularProgress,
+  Paper,
   Typography,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -47,12 +48,10 @@ function DogBreedDetail(): JSX.Element {
               flexWrap: 'wrap',
               flexDirection: 'row',
               textAlign: 'left',
+              justifyContent: 'space-evenly',
             }}
           >
-            <Box sx={{ p: 3 }}>
-              <Typography variant="body2" color="text">
-                {}
-              </Typography>
+            <Paper elevation={3} sx={{ p: 3 }}>
               <Typography
                 variant="body2"
                 color="text"
@@ -65,8 +64,8 @@ function DogBreedDetail(): JSX.Element {
                 variant="body2"
                 color="text"
               >{`Bred for: ${ breed.bred_for }`}</Typography>
-            </Box>
-            <Box sx={{ p: 3 }}>
+            </Paper>
+            <Paper sx={{ p: 3 }}>
               <Typography
                 variant="body2"
                 color="text"
@@ -79,7 +78,7 @@ function DogBreedDetail(): JSX.Element {
                 variant="body2"
                 color="text"
               >{`Weight: ${ breed.weight.metric } kg`}</Typography>
-            </Box>
+            </Paper>
           </Box>
         </CardContent>
       </Card>
