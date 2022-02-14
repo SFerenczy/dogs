@@ -13,7 +13,7 @@ function HeaderBar(): JSX.Element {
   return (
     <header className="App-header">
       {
-        /* Render a back-icon on the dog breed detail page */
+        /* Render a back-icon if on the dog breed detail page */
         match && (
           <IconButton
             sx={{ ml: 2, color: 'primary.main' }}

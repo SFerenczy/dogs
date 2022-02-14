@@ -42,7 +42,15 @@ function DogList(): JSX.Element {
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        p: 3,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+      }}
+    >
       {dogs === 'pending' ? (
         <CircularProgress color="primary" />
       ) : (
@@ -67,7 +75,7 @@ function DogList(): JSX.Element {
         color="primary"
         onChange={handlePageChange}
       />
-    </>
+    </Box>
   );
 }
 

@@ -51,9 +51,11 @@ function DogBreedDetail(): JSX.Element {
               flexDirection: 'row',
               textAlign: 'left',
               justifyContent: 'space-evenly',
+              rowGap: 2,
+              columnGap: 2,
             }}
           >
-            <Paper elevation={3} sx={{ p: 3 }}>
+            <Paper elevation={3} sx={{ p: 3, flexGrow: 1 }}>
               <Typography
                 variant="body2"
                 color="text"
@@ -67,7 +69,7 @@ function DogBreedDetail(): JSX.Element {
                 color="text"
               >{`Bred for: ${ breed.bred_for }`}</Typography>
             </Paper>
-            <Paper sx={{ p: 3 }}>
+            <Paper sx={{ p: 3, flexGrow: 1 }}>
               <Typography
                 variant="body2"
                 color="text"
