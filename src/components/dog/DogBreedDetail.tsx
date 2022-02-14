@@ -28,12 +28,14 @@ function DogBreedDetail(): JSX.Element {
   }, [ params.name ] );
 
   // If breed is not found, navigate to dog list.
-  if ( breed.status ) {
-    navigate( '/doglist' );
-    return <></>;
-  }
+  useEffect( () => {
+    if ( breed !== 'pending' && !breed.id ) {
+      navigate( '/doglist' );
+    }
+  }, [ breed, navigate ] );
 
-  return breed === 'pending' ? (
+  // Display a progress indicator if breed is still being fetched
+  return breed === 'pending' || !breed.id ? (
     <CircularProgress />
   ) : (
     <Box sx={{ p: 3 }}>
