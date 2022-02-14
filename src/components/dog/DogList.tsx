@@ -46,9 +46,10 @@ function DogList(): JSX.Element {
       sx={{
         p: 3,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'column',
+        rowGap: 3,
       }}
     >
       {dogs === 'pending' ? (
